@@ -6,9 +6,9 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 
 ## Status
 - Current day: Day 0 (not started)
-- Flutter installed: no
-- Repo created: no
-- Last updated: 2026-09-20
+- Flutter installed: yes
+- Repo created: yes
+- Last updated: 2026-10-2
 
 ## Goals
 1. Working weather app: current conditions, hourly, 7-day forecast, city search, device location, favorites, unit toggle.
