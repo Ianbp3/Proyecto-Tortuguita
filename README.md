@@ -5,22 +5,26 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 > This README is also the project context file for Claude. Keep Status, Decisions, Open questions and Progress log up to date.
 
 ## Status
-- Current day: Day 0 (not started)
+
+- Current day: Day 3-5 (not started)
 - Flutter installed: yes
 - Repo created: yes
 - Last updated: 2026-10-2
 
 ## Goals
+
 1. Working weather app: current conditions, hourly, 7-day forecast, city search, device location, favorites, unit toggle.
 2. Turtle theme: mascot art that changes with the weather, light/dark theme, small animations.
 3. Published Android release on Google Play (closed testing required, see below).
 4. Clean, documented GitHub repo.
 
 ## Scope
+
 - In: Android release, one shared Flutter codebase, free weather API.
 - Out for now: iOS release, login/accounts, custom backend, push notifications.
 
 ## Tech stack
+
 - Flutter + Dart (official docs reflected Flutter 3.47.2 in Sep 2026)
 - VS Code with the Flutter extension; Android Studio for the Android SDK and emulator
 - Weather data: Open-Meteo (assumed, free, no API key). Verify its terms before any monetization.
@@ -28,11 +32,13 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 - Git + GitHub
 
 ## Dev environment
+
 - OS: Windows
 - No Mac, no iPhone available
 - Test device: not decided (phone with USB debugging, or Android emulator)
 
 ## Working agreement with Claude
+
 - Start every message with "Ian,".
 - Always say whether the GitHub project source was checked, and why or why not.
 - No em-dashes. Efficient, hands-on tone.
@@ -41,6 +47,7 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 - Before answering plan questions, check this README (Status, Decisions, Progress log).
 
 ## Setup checklist (Windows)
+
 1. Install Git for Windows and VS Code.
 2. Install the Flutter extension (Dart-Code.flutter). Ctrl+Shift+P > "Flutter: New Project" > Download SDK > Clone Flutter > Add SDK to PATH. Restart terminals and VS Code.
 3. Run `flutter doctor -v`.
@@ -49,13 +56,16 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 6. Device: phone (Developer options, USB debugging, OEM USB driver if needed) or emulator (enable virtualization in BIOS, hardware graphics acceleration).
 7. Verify: `flutter doctor`, `flutter emulators`, `flutter devices`.
 8. Create the app:
+
 ```
 cd C:\src
 flutter create turtle_weather
 cd turtle_weather
 flutter run
 ```
+
 9. Push to GitHub:
+
 ```
 git init
 git add .
@@ -66,9 +76,11 @@ git push -u origin main
 ```
 
 ## 30-day plan
+
 Tick items as they are done.
 
 ### Week 1: Setup and basics
+
 - [ ] D1: Install Flutter, Git, VS Code, Android Studio; clean `flutter doctor`
 - [ ] D2: Run default app; create GitHub repo; first commit; add this README
 - [ ] D3: Dart basics (classes, null safety, async/await)
@@ -78,6 +90,7 @@ Tick items as they are done.
 - [ ] D7: Buffer and review
 
 ### Week 2: Real data
+
 - [ ] D8: Test Open-Meteo in the browser; create Google Play Console account ($25) and start any identity verification
 - [ ] D9: Model classes and JSON parsing
 - [ ] D10: `http` package and weather service
@@ -87,6 +100,7 @@ Tick items as they are done.
 - [ ] D14: First signed .aab uploaded to a Play closed test; invite 12 testers
 
 ### Week 3: Features (closed test running)
+
 - [ ] D15: City search (geocoding)
 - [ ] D16: Device location and permissions (also write the iOS location permission text in advance, untested)
 - [ ] D17: Hourly forecast
@@ -96,6 +110,7 @@ Tick items as they are done.
 - [ ] D21: Buffer; ship an update to the closed test; collect feedback
 
 ### Week 4: Turtle polish and release
+
 - [ ] D22: Turtle design: palette, mascot, light/dark theme
 - [ ] D23: Map weather conditions to turtle art
 - [ ] D24: Animations
@@ -107,6 +122,7 @@ Tick items as they are done.
 - [ ] D30: Demo, retro, next ideas
 
 ## Google Play launch requirements (verify in Play Console Help)
+
 - Personal developer accounts created after Nov 13, 2023 must run a closed test with at least 12 testers opted in continuously for 14 days before applying for production access.
 - Testers should be real people on real Android devices. Emulators and duplicate accounts do not count.
 - The 14-day clock starts only after Google approves the release and 12 testers have opted in, so Day 28 may slip.
@@ -117,6 +133,7 @@ Tick items as they are done.
 - The app uses location, so a privacy policy is likely required.
 
 ## iOS later
+
 - No Mac or iPhone now, so iOS is deferred.
 - Keep the generated `ios/` folder untouched.
 - Use only packages that support both Android and iOS.
@@ -124,22 +141,26 @@ Tick items as they are done.
 - iOS needs: a Mac with Xcode (or a cloud Mac build service such as Codemagic or GitHub Actions macOS runners), plus an Apple Developer account (about $99 USD/year) to test on a real iPhone or publish.
 
 ## Decisions
+
 - One shared Flutter codebase.
 - Android-only launch first; iOS deferred.
 - Windows development environment.
 
 ## Open questions and assumptions
+
 - Assumed: "Turtle" is a theme and mascot, not turtle-specific data. Confirm.
 - Test device: phone or emulator?
 - Google Play developer account: does one exist, and was it created before Nov 13, 2023?
 - State management: Provider or Riverpod?
 
 ## Progress log
+
 | Date | Day | Done | Blockers / notes |
-|------|-----|------|------------------|
+| ---- | --- | ---- | ---------------- |
 |      |     |      |                  |
 
 ## References
+
 - Flutter install with VS Code: https://docs.flutter.dev/install/with-vs-code
 - Flutter Android setup: https://docs.flutter.dev/platform-integration/android/setup
 - Play Console testing requirements: https://support.google.com/googleplay/android-developer/answer/14151465
