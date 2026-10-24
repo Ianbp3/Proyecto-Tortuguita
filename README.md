@@ -10,7 +10,7 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 - Flutter installed: yes
 - Repo created: yes
 - Test device: Android phone (SM A566E), USB debugging
-- Last updated: 2026-10-03
+- Last updated: 2026-10-24
 
 ## Goals
 
@@ -82,12 +82,12 @@ Tick items as they are done.
 
 ### Week 1: Setup and basics
 
-- [ ] D1: Install Flutter, Git, VS Code, Android Studio; clean `flutter doctor`
-- [ ] D2: Run default app; create GitHub repo; first commit; add this README
-- [ ] D3: Dart basics (classes, null safety, async/await)
-- [ ] D4: Widgets (Stateless vs Stateful, Row/Column/Container, hot reload)
-- [ ] D5: Static weather screen with fake data
-- [ ] D6: Folder structure (models, services, screens, widgets) and navigation
+- [x] D1: Install Flutter, Git, VS Code, Android Studio; clean `flutter doctor`
+- [x] D2: Run default app; create GitHub repo; first commit; add this README
+- [x] D3: Dart basics (classes, null safety, async/await)
+- [x] D4: Widgets (Stateless vs Stateful, Row/Column/Container, hot reload)
+- [x] D5: Static weather screen with fake data
+- [x] D6: Folder structure (models, services, screens, widgets) and navigation
 - [ ] D7: Buffer and review
 
 ### Week 2: Real data
