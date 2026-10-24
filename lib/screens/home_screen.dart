@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/stat_tile.dart';
 import '../models/weather.dart';
+import '../services/weather_service.dart';
+import '../widgets/stat_tile.dart';
 import 'favorites_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final WeatherService service;
 
-  static const Weather _fake = Weather(
-    city: 'San Pedro Sula',
-    temperature: 28.0,
-    condition: 'Sunny',
-    windSpeed: 12.0,
-    humidity: 68,
-  );
+  const HomeScreen({super.key, this.service = const FakeWeatherService()});
 
   @override
   Widget build(BuildContext context) {
+    final Weather weather = service.getCurrentWeather();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Turtle Weather'),
@@ -38,18 +34,18 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                _fake.city,
+                weather.city,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 16),
               const Text('🐢', style: TextStyle(fontSize: 96)),
               const SizedBox(height: 16),
               Text(
-                '${_fake.temperature.toStringAsFixed(0)}°C',
+                '${weather.temperature.toStringAsFixed(0)}°C',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
               Text(
-                _fake.condition,
+                weather.condition,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 24),
@@ -58,9 +54,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   StatTile(
                     label: 'Wind',
-                    value: '${_fake.windSpeed.toStringAsFixed(0)} km/h',
+                    value: '${weather.windSpeed.toStringAsFixed(0)} km/h',
                   ),
-                  StatTile(label: 'Humidity', value: '${_fake.humidity}%'),
+                  StatTile(label: 'Humidity', value: '${weather.humidity}%'),
                 ],
               ),
             ],
