@@ -6,7 +6,7 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 
 ## Status
 
-- Current day: Day 5 done
+- Current day: Day 6 done
 - Flutter installed: yes
 - Repo created: yes
 - Test device: Android phone (SM A566E), USB debugging
@@ -151,9 +151,7 @@ Tick items as they are done.
 ## Open questions and assumptions
 
 - Assumed: "Turtle" is a theme and mascot, not turtle-specific data. Confirm.
-- Test device: phone or emulator?
 - Google Play developer account: does one exist, and was it created before Nov 13, 2023?
-- State management: Provider or Riverpod?
 
 ## Progress log
 
