@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/stat_tile.dart';
 import '../models/weather.dart';
+import 'favorites_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,9 +17,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar: AppBar(title: const Text('Turtle Weather')),
+      appBar: AppBar(
+        title: const Text('Turtle Weather'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.star),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const FavoritesScreen()),
+              );
+            },
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -42,47 +56,17 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  _Stat(
+                  StatTile(
                     label: 'Wind',
                     value: '${_fake.windSpeed.toStringAsFixed(0)} km/h',
-                    color: scheme.primary,
                   ),
-                  _Stat(
-                    label: 'Humidity',
-                    value: '${_fake.humidity}%',
-                    color: scheme.primary,
-                  ),
+                  StatTile(label: 'Humidity', value: '${_fake.humidity}%'),
                 ],
               ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class _Stat extends StatelessWidget {
-  final String label;
-  final String value;
-  final Color color;
-
-  const _Stat({required this.label, required this.value, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          value,
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            color: color,
-          ),
-        ),
-        Text(label),
-      ],
     );
   }
 }

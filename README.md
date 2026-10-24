@@ -6,10 +6,11 @@ A turtle-themed weather app built with Flutter. Goal: publish an Android version
 
 ## Status
 
-- Current day: Day 3-5 (not started)
+- Current day: Day 5 done
 - Flutter installed: yes
 - Repo created: yes
-- Last updated: 2026-10-2
+- Test device: Android phone (SM A566E), USB debugging
+- Last updated: 2026-10-03
 
 ## Goals
 
@@ -145,6 +146,7 @@ Tick items as they are done.
 - One shared Flutter codebase.
 - Android-only launch first; iOS deferred.
 - Windows development environment.
+- State management: Provider.
 
 ## Open questions and assumptions
 
